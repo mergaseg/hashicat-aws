@@ -3,6 +3,8 @@ module "s3_bucket" {
 
   bucket = "my-s3-bucket-segni"
   acl    = "private"
+  object ownership = "true"
+  object_ownership = "ObjectWriter"
 
   versioning = {
     enabled = true
