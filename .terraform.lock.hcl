@@ -2,8 +2,8 @@
 # Manual edits may be lost in future updates.
 
 provider "registry.terraform.io/hashicorp/aws" {
-  version     = ">=3.42.0"
-  constraints = ">=3.42.0"
+  version     = "3.42.0"
+  constraints = "3.42.0"
   hashes = [
     "h1:quV6hK7ewiHWBznGWCb/gJ6JAPm6UtouBUrhAjv6oRY=",
     "zh:126c856a6eedddd8571f161a826a407ba5655a37a6241393560a96b8c4beca1a",
@@ -18,6 +18,11 @@ provider "registry.terraform.io/hashicorp/aws" {
     "zh:d6eeb3614a0ab50f8e9ab5666ae5754ea668ce327310e5b21b7f04a18d7611a8",
     "zh:f5d3c58055dff6e38562b75d3edc908cb2f1e45c6914f6b00f4773359ce49324",
   ]
+}
+
+module "s3-bucket" {
+  source  = "app.terraform.io/segnmerg-aws/s3-bucket/aws"
+  version = "2.8.0"
 }
 
 provider "registry.terraform.io/hashicorp/null" {
